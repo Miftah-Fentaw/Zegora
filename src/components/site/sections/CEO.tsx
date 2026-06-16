@@ -5,7 +5,9 @@ export function CEO() {
     <section className="bg-cream-soft">
       <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
         <div className="text-center">
-          <p className="eyebrow"><span className="eyebrow-line" /> Leadership</p>
+          <p className="eyebrow">
+            <span className="eyebrow-line" /> Leadership
+          </p>
           <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Message From Our CEO</h2>
         </div>
 
@@ -29,9 +31,15 @@ export function CEO() {
           <div className="lg:col-span-8">
             <Quote className="h-10 w-10 text-gold" strokeWidth={1.5} />
             <blockquote className="mt-4 text-lg leading-relaxed text-ink md:text-xl">
-              "At ZEGORA Foreign Employment Agency, we are proud of our <strong className="text-primary">20+ years of experience</strong> connecting talented Ethiopian professionals with trusted international employers. Our commitment to ethical recruitment, transparency, and client success has made us a trusted partner for thousands of workers and businesses worldwide."
+              "At ZEGORA Foreign Employment Agency, we are proud of our{" "}
+              <strong className="text-primary">20+ years of experience</strong> connecting talented
+              Ethiopian professionals with trusted international employers. Our commitment to
+              ethical recruitment, transparency, and client success has made us a trusted partner
+              for thousands of workers and businesses worldwide."
             </blockquote>
-            <p className="mt-6 text-sm font-medium text-muted-foreground">— Yohans Getnet Abebe, CEO</p>
+            <p className="mt-6 text-sm font-medium text-muted-foreground">
+              — Yohans Getnet Abebe, CEO
+            </p>
           </div>
         </div>
       </div>

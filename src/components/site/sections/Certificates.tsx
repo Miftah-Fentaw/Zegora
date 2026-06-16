@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { X, Expand } from "lucide-react";
 import governmentLicense from "@/assets/zegora-government-license.png.asset.json";
@@ -40,11 +42,15 @@ export function Certificates() {
       <section className="bg-cream">
         <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
           <div className="text-center">
-            <p className="eyebrow"><span className="eyebrow-line" /> Certificates &amp; Licenses</p>
-            <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Trusted, Licensed, and Recognized</h2>
+            <p className="eyebrow">
+              <span className="eyebrow-line" /> Certificates &amp; Licenses
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+              Trusted, Licensed, and Recognized
+            </h2>
             <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-              Official certifications and licensing that reinforce ZEGORA&apos;s commitment to professionalism,
-              legal compliance, and ethical foreign employment services.
+              Official certifications and licensing that reinforce ZEGORA&apos;s commitment to
+              professionalism, legal compliance, and ethical foreign employment services.
             </p>
           </div>
 
@@ -70,7 +76,9 @@ export function Certificates() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.subtitle}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {item.subtitle}
+                  </p>
                 </div>
               </button>
             ))}
@@ -103,7 +111,11 @@ export function Certificates() {
               <p className="mt-1 text-sm text-muted-foreground">{active.subtitle}</p>
             </div>
             <div className="max-h-[80vh] overflow-auto bg-muted p-3 md:p-5">
-              <img src={active.image} alt={active.alt} className="mx-auto h-auto w-full rounded-xl object-contain" />
+              <img
+                src={active.image}
+                alt={active.alt}
+                className="mx-auto h-auto w-full rounded-xl object-contain"
+              />
             </div>
           </div>
         </div>

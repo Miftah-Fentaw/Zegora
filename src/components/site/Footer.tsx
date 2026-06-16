@@ -21,15 +21,14 @@ export function Footer() {
             <Logo className="h-12 w-auto" />
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-foreground/80">
-            ZEGORA Foreign Employment Agency — a trusted pioneer with over 20 years of experience connecting Ethiopian talent with global employment opportunities.
+            ZEGORA Foreign Employment Agency — a trusted pioneer with over 20 years of experience
+            connecting Ethiopian talent with global employment opportunities.
           </p>
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold">
             <Award className="h-3.5 w-3.5" /> 20+ Years · Trusted Industry Pioneer
           </div>
           <div className="mt-6">
-            <SocialIcons
-              itemClassName="inline-flex h-9 w-9 items-center justify-center rounded-full border border-primary-foreground/20 text-primary-foreground/90 transition-all hover:bg-gold hover:text-primary hover:border-gold hover:scale-110"
-            />
+            <SocialIcons itemClassName="inline-flex h-9 w-9 items-center justify-center rounded-full border border-primary-foreground/20 text-primary-foreground/90 transition-all hover:bg-gold hover:text-primary hover:border-gold hover:scale-110" />
           </div>
         </div>
 
@@ -38,7 +37,9 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm text-primary-foreground/80">
             {LINKS.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="hover:text-gold">{l.label}</a>
+                <a href={l.href} className="hover:text-gold">
+                  {l.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -49,11 +50,24 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/85">
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              <span>+251 11 558 0901<br />+251 11 558 0902<br />+251 11 558 0904</span>
+              <span>
+                +251 11 558 0901
+                <br />
+                +251 11 558 0902
+                <br />
+                +251 11 558 0904
+              </span>
             </li>
-            <li className="flex items-start gap-3"><Mail className="mt-0.5 h-4 w-4 text-gold" /> info@zegora.com</li>
-            <li className="flex items-start gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> Stadium, Yeha City Center, 9th Floor, Addis Ababa, Ethiopia</li>
-            <li className="flex items-start gap-3"><MessageCircle className="mt-0.5 h-4 w-4 text-gold" /> WhatsApp: +251 901 918 658</li>
+            <li className="flex items-start gap-3">
+              <Mail className="mt-0.5 h-4 w-4 text-gold" /> info@zegora.com
+            </li>
+            <li className="flex items-start gap-3">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> Stadium, Yeha City Center,
+              9th Floor, Addis Ababa, Ethiopia
+            </li>
+            <li className="flex items-start gap-3">
+              <MessageCircle className="mt-0.5 h-4 w-4 text-gold" /> WhatsApp: +251 901 918 658
+            </li>
           </ul>
         </div>
       </div>

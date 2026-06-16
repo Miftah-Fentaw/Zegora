@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { Logo } from "./Logo";
@@ -27,7 +29,9 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   return (
@@ -37,7 +41,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 lg:py-4">
-        <Link to="/" className="flex items-center" aria-label="ZEGORA home">
+        <Link href="/" className="flex items-center" aria-label="ZEGORA home">
           <Logo className="h-10 w-auto sm:h-12" />
         </Link>
 
@@ -78,9 +82,7 @@ export function Header() {
       </div>
 
       {/* Mobile drawer */}
-      <div
-        className={`lg:hidden ${open ? "block" : "hidden"} border-t border-border bg-cream`}
-      >
+      <div className={`lg:hidden ${open ? "block" : "hidden"} border-t border-border bg-cream`}>
         <nav className="mx-auto flex max-w-7xl flex-col px-4 py-3">
           {NAV.map((item) => (
             <a

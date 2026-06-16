@@ -1,3 +1,5 @@
+"use client";
+
 import { ChevronRight, Users, Globe2, Briefcase, Award } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import office from "@/assets/zegora-office-4k.png.asset.json";
@@ -44,7 +46,14 @@ function useCountUp(target: number, start: boolean, duration = 1400) {
   return v;
 }
 
-function Stat({ icon: Icon, value, suffix, label, display, start }: typeof STATS[number] & { start: boolean }) {
+function Stat({
+  icon: Icon,
+  value,
+  suffix,
+  label,
+  display,
+  start,
+}: (typeof STATS)[number] & { start: boolean }) {
   const n = useCountUp(value, start);
   const shown = value >= 1000 ? `${Math.round(n / 1000)}K${suffix}` : `${n}${suffix}`;
   return (
@@ -66,8 +75,13 @@ export function About() {
   useEffect(() => {
     if (!ref.current) return;
     const io = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); io.disconnect(); } },
-      { threshold: 0.25 }
+      ([e]) => {
+        if (e.isIntersecting) {
+          setVisible(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.25 },
     );
     io.observe(ref.current);
     return () => io.disconnect();
@@ -81,25 +95,42 @@ export function About() {
         </div>
 
         <div className="lg:col-span-4">
-          <p className="eyebrow"><span className="eyebrow-line" /> About Us</p>
+          <p className="eyebrow">
+            <span className="eyebrow-line" /> About Us
+          </p>
           <h2 className="mt-4 text-3xl font-semibold leading-tight md:text-4xl">
             A Pioneer in Foreign Employment Services
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            ZEGORA Foreign Employment Agency is a pioneering recruitment company with more than two decades of experience in overseas employment services. Since its establishment, we have connected qualified job seekers with reputable international employers through professional, ethical and reliable recruitment solutions.
+            ZEGORA Foreign Employment Agency is a pioneering recruitment company with more than two
+            decades of experience in overseas employment services. Since its establishment, we have
+            connected qualified job seekers with reputable international employers through
+            professional, ethical and reliable recruitment solutions.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            With <strong className="text-primary">20+ years of industry experience</strong>, ZEGORA has built a strong reputation for excellence, integrity and customer satisfaction — specializing in international workforce placement for employers and candidates alike.
+            With <strong className="text-primary">20+ years of industry experience</strong>, ZEGORA
+            has built a strong reputation for excellence, integrity and customer satisfaction —
+            specializing in international workforce placement for employers and candidates alike.
           </p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="rounded-xl border border-border bg-cream-soft p-4">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-primary">Mission</h4>
-              <p className="mt-2 text-sm leading-relaxed text-ink">Provide trusted and efficient overseas employment opportunities while delivering exceptional service to employers and job seekers.</p>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-primary">
+                Mission
+              </h4>
+              <p className="mt-2 text-sm leading-relaxed text-ink">
+                Provide trusted and efficient overseas employment opportunities while delivering
+                exceptional service to employers and job seekers.
+              </p>
             </div>
             <div className="rounded-xl border border-border bg-cream-soft p-4">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-primary">Vision</h4>
-              <p className="mt-2 text-sm leading-relaxed text-ink">Be a leading and respected foreign employment agency recognized for excellence, integrity and successful international placements.</p>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-primary">
+                Vision
+              </h4>
+              <p className="mt-2 text-sm leading-relaxed text-ink">
+                Be a leading and respected foreign employment agency recognized for excellence,
+                integrity and successful international placements.
+              </p>
             </div>
           </div>
 
@@ -113,7 +144,9 @@ export function About() {
 
         <div ref={ref} className="lg:col-span-3">
           <div className="grid grid-cols-2 gap-5 lg:grid-cols-1">
-            {STATS.map((s) => <Stat key={s.label} {...s} start={visible} />)}
+            {STATS.map((s) => (
+              <Stat key={s.label} {...s} start={visible} />
+            ))}
           </div>
         </div>
       </div>

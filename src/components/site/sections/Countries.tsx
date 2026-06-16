@@ -1,6 +1,10 @@
 const COUNTRIES = [
   { name: "Saudi Arabia", flag: "🇸🇦", note: "Largest demand for skilled and domestic workers." },
-  { name: "United Arab Emirates", flag: "🇦🇪", note: "Hospitality, construction, healthcare and retail roles." },
+  {
+    name: "United Arab Emirates",
+    flag: "🇦🇪",
+    note: "Hospitality, construction, healthcare and retail roles.",
+  },
   { name: "Qatar", flag: "🇶🇦", note: "Infrastructure, hospitality and service sectors." },
   { name: "Kuwait", flag: "🇰🇼", note: "Domestic, healthcare and oil & gas placements." },
   { name: "Bahrain", flag: "🇧🇭", note: "Hospitality, retail and skilled trades." },
@@ -16,7 +20,9 @@ export function Countries() {
     <section className="bg-cream">
       <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
         <div className="text-center">
-          <p className="eyebrow"><span className="eyebrow-line" /> Destination Countries</p>
+          <p className="eyebrow">
+            <span className="eyebrow-line" /> Destination Countries
+          </p>
           <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Where We Place Talent</h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
             Trusted employer partnerships across the Gulf and Europe.

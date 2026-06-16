@@ -3,7 +3,9 @@ export function MapSection() {
     <section className="bg-cream">
       <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
         <div className="text-center">
-          <p className="eyebrow"><span className="eyebrow-line" /> Location</p>
+          <p className="eyebrow">
+            <span className="eyebrow-line" /> Location
+          </p>
           <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Find Our Addis Ababa Office</h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
             Stadium, Yeha City Center, 9th Floor, Addis Ababa, Ethiopia.

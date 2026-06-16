@@ -1,10 +1,26 @@
 import { Compass, FileText, Plane, ShieldCheck } from "lucide-react";
 
 const STEPS = [
-  { icon: Compass, title: "Guidance", text: "Honest advice on roles, countries and what to expect." },
-  { icon: FileText, title: "Documentation", text: "Help preparing passport, medical and certification paperwork." },
-  { icon: ShieldCheck, title: "Ethical Placement", text: "Placement only with verified, compliant employers." },
-  { icon: Plane, title: "Pre-Departure & Arrival", text: "Orientation, travel coordination and post-arrival follow-up." },
+  {
+    icon: Compass,
+    title: "Guidance",
+    text: "Honest advice on roles, countries and what to expect.",
+  },
+  {
+    icon: FileText,
+    title: "Documentation",
+    text: "Help preparing passport, medical and certification paperwork.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Ethical Placement",
+    text: "Placement only with verified, compliant employers.",
+  },
+  {
+    icon: Plane,
+    title: "Pre-Departure & Arrival",
+    text: "Orientation, travel coordination and post-arrival follow-up.",
+  },
 ];
 
 export function JobSeekers() {
@@ -12,10 +28,15 @@ export function JobSeekers() {
     <section className="bg-cream">
       <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
         <div className="text-center">
-          <p className="eyebrow"><span className="eyebrow-line" /> For Job Seekers</p>
-          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Your Path to a Trusted Career Abroad</h2>
+          <p className="eyebrow">
+            <span className="eyebrow-line" /> For Job Seekers
+          </p>
+          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+            Your Path to a Trusted Career Abroad
+          </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            ZEGORA supports Ethiopian professionals through every step of the overseas employment journey — with transparency and care.
+            ZEGORA supports Ethiopian professionals through every step of the overseas employment
+            journey — with transparency and care.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zegora-foreign-employment-agent-et.lovable.app/sitemap.xml

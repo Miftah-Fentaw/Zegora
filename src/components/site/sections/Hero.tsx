@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { ChevronRight, Award } from "lucide-react";
 import heroImage from "@/assets/zegora-workforce-team.jpg.asset.json";
 import { Logo } from "../Logo";
@@ -20,28 +20,29 @@ export function Hero() {
             <Award className="h-3.5 w-3.5" /> 20+ Years of Experience · Trusted Industry Pioneer
           </span>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.05] !text-primary-foreground md:text-5xl lg:text-6xl">
-            Connecting Talent.<br />Building Futures.
+            Connecting Talent.
+            <br />
+            Building Futures.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/90 md:text-lg">
-            ZEGORA Foreign Employment Agency — a pioneer in foreign employment services for more than two decades, bridging Ethiopian talent with global opportunities.
+            ZEGORA Foreign Employment Agency — a pioneer in foreign employment services for more
+            than two decades, bridging Ethiopian talent with global opportunities.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              to="/"
-              hash="job-seekers"
+              href="/#job-seekers"
               className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-medium text-ink transition-transform hover:scale-[1.02]"
             >
               For Job Seekers <ChevronRight className="h-4 w-4" />
             </Link>
             <Link
-              to="/"
-              hash="employers"
+              href="/#employers"
               className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 bg-background/10 px-6 py-3 text-sm font-medium text-primary-foreground backdrop-blur-sm transition-colors hover:bg-background/20"
             >
               For Employers <ChevronRight className="h-4 w-4" />
             </Link>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm font-medium text-primary transition-transform hover:scale-[1.02]"
             >
               Get In Touch <ChevronRight className="h-4 w-4" />

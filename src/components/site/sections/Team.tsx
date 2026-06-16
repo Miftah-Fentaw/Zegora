@@ -5,10 +5,15 @@ export function Team() {
     <section className="bg-background">
       <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
         <div className="text-center">
-          <p className="eyebrow"><span className="eyebrow-line" /> Our Workforce</p>
-          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">Empowering Ethiopian Talent for Global Opportunities</h2>
+          <p className="eyebrow">
+            <span className="eyebrow-line" /> Our Workforce
+          </p>
+          <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
+            Empowering Ethiopian Talent for Global Opportunities
+          </h2>
           <p className="mx-auto mt-3 max-w-3xl text-muted-foreground">
-            We prepare skilled Ethiopian professionals for successful international careers through ethical recruitment, professional guidance, and trusted global partnerships.
+            We prepare skilled Ethiopian professionals for successful international careers through
+            ethical recruitment, professional guidance, and trusted global partnerships.
           </p>
         </div>
 
