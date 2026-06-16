@@ -1,0 +1,123 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-ink: var(--ink);
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Brand */
+  --primary: oklch(0.36 0.07 156);          /* #0E4B3A dark green */
+  --primary-foreground: oklch(0.98 0.02 90);
+  --gold: oklch(0.78 0.10 80);              /* #D4B06A */
+  --gold-soft: oklch(0.92 0.05 85);
+  --cream: oklch(0.97 0.025 90);            /* #F8F5EC */
+  --cream-soft: oklch(0.985 0.015 90);
+  --ink: oklch(0.30 0.06 156);
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.22 0.04 156);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.04 156);
+  --secondary: var(--cream);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.96 0.01 90);
+  --muted-foreground: oklch(0.48 0.02 100);
+  --accent: var(--gold-soft);
+  --accent-foreground: var(--ink);
+  --border: oklch(0.90 0.015 90);
+  --input: oklch(0.92 0.015 90);
+  --ring: var(--gold);
+
+  /* unused but kept so shadcn-ish imports never break */
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.04 156);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+@utility eyebrow-line {
+  content: "";
+  display: inline-block;
+  width: 2.25rem;
+  height: 2px;
+  background: var(--color-gold);
+}
+
+/* Subtle world-map watermark for hero */
+@utility hero-bg {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--color-gold) 35%, transparent) 1px, transparent 0);
+  background-size: 14px 14px;
+  background-position: 60% 30%;
+}
+
+html { scroll-behavior: smooth; }
+
