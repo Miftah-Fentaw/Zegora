@@ -1,0 +1,13 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/robots.txt/route": "/robots.txt",
+  "/manifest.webmanifest/route": "/manifest.webmanifest",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/countries/page": "/countries",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/services/page": "/services",
+  "/job-seekers/page": "/job-seekers",
+  "/employers/page": "/employers",
+  "/page": "/"
+}
