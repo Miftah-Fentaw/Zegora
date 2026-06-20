@@ -1,21 +1,25 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, Building2, Globe2, ShieldCheck, Users } from "lucide-react";
 import { SiteLayout, PageHeader } from "@/components/site/Layout";
+import { JsonLd } from "@/components/site/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "For Employers — ZEGORA Foreign Employment Agency",
+export const metadata = createPageMetadata({
+  title: "Hire Ethiopian Workers — For Employers | ZEGORA Agency",
   description:
-    "Partner with ZEGORA to recruit reliable, skilled Ethiopian talent for your workforce — vetted, compliant and ready to deploy.",
-  openGraph: {
-    title: "For Employers — ZEGORA",
-    description: "Reliable Ethiopian talent for your international workforce.",
-    url: "https://zegora-foreign-employment-agent-et.lovable.app/employers",
-  },
-  alternates: {
-    canonical: "https://zegora-foreign-employment-agent-et.lovable.app/employers",
-  },
-};
+    "Partner with ZEGORA Ethiopian employment agency to recruit reliable, skilled Ethiopian workers. Pre-vetted candidates, full legal compliance, Gulf & Europe deployment.",
+  path: "/employers",
+  keywords: [
+    "hire Ethiopian workers",
+    "Ethiopian manpower agency for employers",
+    "recruit workers from Ethiopia",
+    "Zegora employer partnership",
+  ],
+  ogTitle: "For Employers — ZEGORA Ethiopian Recruitment Agency",
+  ogDescription:
+    "Source vetted Ethiopian talent through Zegora agency — hospitality, healthcare, construction and more.",
+});
 
 const POINTS = [
   {
@@ -39,10 +43,16 @@ const POINTS = [
 export default function EmployersPage() {
   return (
     <SiteLayout>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "For Employers", path: "/employers" },
+        ])}
+      />
       <PageHeader
         eyebrow="For Employers"
         title="Hire Reliable, Skilled Ethiopian Talent"
-        subtitle="ZEGORA is your dedicated recruitment partner for sourcing, vetting and deploying qualified workers across multiple sectors."
+        subtitle="ZEGORA is your dedicated Ethiopian employment agency for sourcing, vetting and deploying qualified workers across multiple sectors."
       />
       <section className="bg-background">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:grid-cols-2 md:py-20 lg:grid-cols-4">

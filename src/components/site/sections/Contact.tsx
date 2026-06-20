@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { SocialIcons } from "../SocialIcons";
+import { SITE } from "@/lib/seo";
 
 const TILES = [
   {
@@ -11,8 +12,8 @@ const TILES = [
   {
     icon: Mail,
     label: "Email",
-    lines: ["info@zegora.com"],
-    href: "mailto:info@zegora.com",
+    lines: [SITE.email],
+    href: `mailto:${SITE.email}`,
   },
   {
     icon: MapPin,
@@ -84,7 +85,7 @@ export function Contact() {
 
         <div className="mt-10 flex flex-col items-center gap-3 rounded-2xl border border-border bg-cream-soft p-6 text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            Follow ZEGORA
+            Follow Zegora
           </p>
           <SocialIcons
             itemClassName="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110"

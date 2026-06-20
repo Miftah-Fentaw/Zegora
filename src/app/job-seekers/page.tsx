@@ -1,21 +1,26 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, Compass, FileText, Plane, ShieldCheck } from "lucide-react";
 import { SiteLayout, PageHeader } from "@/components/site/Layout";
+import { JsonLd } from "@/components/site/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "For Job Seekers — ZEGORA Foreign Employment Agency",
+export const metadata = createPageMetadata({
+  title: "Work Abroad — Overseas Jobs for Ethiopians | ZEGORA Agency",
   description:
-    "Take the next step in your career abroad with ZEGORA — ethical guidance, transparent processes and trusted international employers.",
-  openGraph: {
-    title: "For Job Seekers — ZEGORA",
-    description: "Your path to a trusted career abroad.",
-    url: "https://zegora-foreign-employment-agent-et.lovable.app/job-seekers",
-  },
-  alternates: {
-    canonical: "https://zegora-foreign-employment-agent-et.lovable.app/job-seekers",
-  },
-};
+    "Find trusted overseas jobs through ZEGORA Ethiopian employment agency. Ethical guidance, transparent processes and verified Gulf & European employers for Ethiopian job seekers.",
+  path: "/job-seekers",
+  keywords: [
+    "work abroad Ethiopia",
+    "overseas jobs for Ethiopians",
+    "apply Gulf jobs Ethiopia",
+    "Zegora job application",
+    "foreign employment for Ethiopians",
+  ],
+  ogTitle: "For Job Seekers — ZEGORA Ethiopian Employment Agency",
+  ogDescription:
+    "Your path to trusted overseas careers abroad with Zegora agency — ethical, licensed recruitment from Addis Ababa.",
+});
 
 const STEPS = [
   {
@@ -43,6 +48,12 @@ const STEPS = [
 export default function JobSeekersPage() {
   return (
     <SiteLayout>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "For Job Seekers", path: "/job-seekers" },
+        ])}
+      />
       <PageHeader
         eyebrow="For Job Seekers"
         title="Your Path to a Trusted Career Abroad"
@@ -67,7 +78,7 @@ export default function JobSeekersPage() {
             Have questions about working abroad?
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Reach out to our team — we'll guide you through every step.
+            Reach out to our team — we&apos;ll guide you through every step.
           </p>
           <Link
             href="/contact"

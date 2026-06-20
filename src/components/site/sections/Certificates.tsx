@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { X, Expand } from "lucide-react";
-import governmentLicense from "@/assets/zegora-government-license.png.asset.json";
-import certificateAuthorization from "@/assets/zegora-certificate-authorization.png.asset.json";
-import excellenceAward from "@/assets/zegora-excellence-award.png.asset.json";
+import governmentLicense from "@/assets/govermental license.jpg";
+import certificateAuthorization from "@/assets/certificate of authorization.jpg";
+import excellenceAward from "@/assets/excellence award.jpg";
 
 type CertificateItem = {
   title: string;
@@ -17,19 +17,19 @@ const ITEMS: CertificateItem[] = [
   {
     title: "Government License",
     subtitle: "Official foreign employment agency operating license.",
-    image: governmentLicense.url,
+    image: governmentLicense.src,
     alt: "Government license for ZEGORA Foreign Employment Agency",
   },
   {
     title: "Certificate of Authorization",
     subtitle: "Ministry-issued authorization certificate for agency operations.",
-    image: certificateAuthorization.url,
+    image: certificateAuthorization.src,
     alt: "Certificate of authorization for ZEGORA Foreign Employment Agency",
   },
   {
     title: "Excellence Award",
     subtitle: "Recognition for ethical recruitment and employment services.",
-    image: excellenceAward.url,
+    image: excellenceAward.src,
     alt: "Excellence award presented to ZEGORA Foreign Employment Agency",
   },
 ];

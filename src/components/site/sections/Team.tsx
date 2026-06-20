@@ -1,4 +1,4 @@
-import teamImage from "@/assets/zegora-workforce-team.jpg.asset.json";
+import teamImage from "@/assets/team.jpg";
 
 export function Team() {
   return (
@@ -19,7 +19,7 @@ export function Team() {
 
         <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-cream-soft shadow-[0_20px_60px_-30px_rgba(14,75,58,0.4)]">
           <img
-            src={teamImage.url}
+            src={teamImage.src}
             alt="Ethiopian women trained and ready for international placement through ZEGORA"
             loading="eager"
             className="block h-auto w-full object-cover"

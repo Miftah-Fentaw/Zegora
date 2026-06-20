@@ -2,13 +2,13 @@
 
 import { ChevronRight, Users, Globe2, Briefcase, Award } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import office from "@/assets/zegora-office-4k.png.asset.json";
+import office from "@/assets/about as.jpg";
 
 function OfficeImage() {
   return (
     <div className="relative overflow-hidden rounded-2xl shadow-[0_20px_60px_-30px_rgba(14,75,58,0.45)] aspect-[4/3]">
       <img
-        src={office.url}
+        src={office.src}
         alt="ZEGORA office reception with company branding"
         loading="eager"
         decoding="async"
@@ -102,13 +102,13 @@ export function About() {
             A Pioneer in Foreign Employment Services
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            ZEGORA Foreign Employment Agency is a pioneering recruitment company with more than two
-            decades of experience in overseas employment services. Since its establishment, we have
-            connected qualified job seekers with reputable international employers through
+            Zegora Foreign Private Employment Agent is a pioneering recruitment company with more
+            than two decades of experience in overseas employment services. Since its establishment,
+            we have connected qualified job seekers with reputable international employers through
             professional, ethical and reliable recruitment solutions.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            With <strong className="text-primary">20+ years of industry experience</strong>, ZEGORA
+            With <strong className="text-primary">20+ years of industry experience</strong>, Zegora
             has built a strong reputation for excellence, integrity and customer satisfaction —
             specializing in international workforce placement for employers and candidates alike.
           </p>

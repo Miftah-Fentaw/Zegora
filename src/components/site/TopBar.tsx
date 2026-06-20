@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SocialIcons } from "./SocialIcons";
+import { SITE } from "@/lib/seo";
 
 export function TopBar() {
   return (
@@ -7,10 +8,10 @@ export function TopBar() {
       <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
           <a
-            href="mailto:info@zegora.com"
+            href={`mailto:${SITE.email}`}
             className="inline-flex items-center gap-2 opacity-90 hover:opacity-100"
           >
-            <Mail className="h-3.5 w-3.5" /> info@zegora.com
+            <Mail className="h-3.5 w-3.5" /> {SITE.email}
           </a>
           <a
             href="tel:+251115580901"

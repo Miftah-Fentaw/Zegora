@@ -31,7 +31,7 @@ export function CEO() {
           <div className="lg:col-span-8">
             <Quote className="h-10 w-10 text-gold" strokeWidth={1.5} />
             <blockquote className="mt-4 text-lg leading-relaxed text-ink md:text-xl">
-              "At ZEGORA Foreign Employment Agency, we are proud of our{" "}
+              "At Zegora Foreign Private Employment Agent, we are proud of our{" "}
               <strong className="text-primary">20+ years of experience</strong> connecting talented
               Ethiopian professionals with trusted international employers. Our commitment to
               ethical recruitment, transparency, and client success has made us a trusted partner

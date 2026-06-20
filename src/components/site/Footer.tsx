@@ -1,15 +1,17 @@
 import { Logo } from "./Logo";
 import { Mail, Phone, MapPin, MessageCircle, Award } from "lucide-react";
 import { SocialIcons } from "./SocialIcons";
+import { SITE } from "@/lib/seo";
 
 const LINKS = [
-  { href: "/#hero", label: "Home" },
-  { href: "/#about", label: "About Us" },
-  { href: "/#services", label: "Our Services" },
-  { href: "/#countries", label: "Countries" },
-  { href: "/#employers", label: "For Employers" },
-  { href: "/#job-seekers", label: "For Job Seekers" },
-  { href: "/#contact", label: "Contact Us" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/services", label: "Our Services" },
+  { href: "/countries", label: "Countries" },
+  { href: "/employers", label: "For Employers" },
+  { href: "/job-seekers", label: "For Job Seekers" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/contact", label: "Contact Us" },
 ] as const;
 
 export function Footer() {
@@ -21,8 +23,8 @@ export function Footer() {
             <Logo className="h-12 w-auto" />
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-foreground/80">
-            ZEGORA Foreign Employment Agency — a trusted pioneer with over 20 years of experience
-            connecting Ethiopian talent with global employment opportunities.
+            {SITE.name} (zegoraagency.com) — a trusted pioneer with over 20 years connecting
+            Ethiopian talent with global employment opportunities.
           </p>
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold">
             <Award className="h-3.5 w-3.5" /> 20+ Years · Trusted Industry Pioneer
@@ -59,7 +61,7 @@ export function Footer() {
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <Mail className="mt-0.5 h-4 w-4 text-gold" /> info@zegora.com
+              <Mail className="mt-0.5 h-4 w-4 text-gold" /> {SITE.email}
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> Stadium, Yeha City Center,
@@ -73,7 +75,9 @@ export function Footer() {
       </div>
       <div className="border-t border-primary-foreground/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-primary-foreground/70 sm:flex-row">
-          <p>© {new Date().getFullYear()} ZEGORA Foreign Employment Agency. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+          </p>
           <p>Bridging Talent with Global Opportunities.</p>
         </div>
       </div>

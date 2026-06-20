@@ -1,18 +1,18 @@
 import Link from "next/link";
 import { ChevronRight, Award } from "lucide-react";
-import heroImage from "@/assets/zegora-workforce-team.jpg.asset.json";
+import heroImage from "@/assets/backgrund.jpg";
 import { Logo } from "../Logo";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
       <img
-        src={heroImage.url}
+        src={heroImage.src}
         alt="ZEGORA team of Ethiopian professionals — 20+ years connecting talent with global opportunities"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute top-0 left-0 w-full h-auto"
         fetchPriority="high"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,34,26,0.78)_0%,rgba(8,34,26,0.55)_55%,rgba(8,34,26,0.35)_100%)] lg:bg-[linear-gradient(90deg,rgba(8,34,26,0.8)_0%,rgba(8,34,26,0.45)_55%,rgba(8,34,26,0.15)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,34,26,0.52)_0%,rgba(8,34,26,0.38)_55%,rgba(8,34,26,0.22)_100%)] lg:bg-[linear-gradient(90deg,rgba(8,34,26,0.55)_0%,rgba(8,34,26,0.32)_55%,rgba(8,34,26,0.12)_100%)]" />
 
       <div className="relative mx-auto grid min-h-[560px] max-w-7xl items-center gap-12 px-4 py-16 md:min-h-[680px] md:py-24 lg:grid-cols-12">
         <div className="lg:col-span-7">
