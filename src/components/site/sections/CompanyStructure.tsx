@@ -33,10 +33,10 @@ const STRUCTURE = [
     alt: "Samuel Girma — Recruitment Manager at Zegora",
   },
   {
-    name: "Meron Tadesse",
+    name: "Bamlaku Tadesse",
     role: "Operations Manager",
     image: man4,
-    alt: "Meron Tadesse — Operations Manager at Zegora",
+    alt: "Bamlaku Tadesse — Operations Manager at Zegora",
   },
   {
     name: "Hana Mekonnen",

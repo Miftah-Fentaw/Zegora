@@ -33,4 +33,8 @@ out/
 *.njsproj
 *.sln
 *.sw?
-*.zip
+*.zip.next/
+out/
+dist.zip
+out.zip
+.env
