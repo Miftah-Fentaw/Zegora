@@ -1,4 +1,4 @@
-// File: /home/miftah/Projects/Intern/zegora-foreign-employment-agent-et-main/zegora-foreign-employment-agent-et-main/src/app/page.tsx
+// File: /home/amar-ahmed/Website-Project/Zegora/src/app/page.tsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

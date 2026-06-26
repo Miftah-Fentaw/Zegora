@@ -74,11 +74,24 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-primary-foreground/70 sm:flex-row">
-          <p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-primary-foreground/70 sm:flex-row sm:gap-2">
+          <p className="text-center sm:text-left">
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
-          <p>Bridging Talent with Global Opportunities.</p>
+          <div className="flex flex-col items-center gap-1.5 sm:items-end">
+            <p>Bridging Talent with Global Opportunities.</p>
+            <p>
+              Developed by{" "}
+              <a
+                href="https://www.rise-tech-solutions.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-gold transition-all hover:text-gold/80 hover:underline underline-offset-4"
+              >
+                Rise Tech Solution
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
